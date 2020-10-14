@@ -1,0 +1,77 @@
+body {
+  background-color: #eee; }
+  body #dimmer {
+    background: #000;
+    opacity: 0.5;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: none;
+    z-index: 9999;
+    /* may not be necessary */ }
+  body .action {
+    cursor: pointer;
+    font-size: 14px;
+    color: #008CBA; }
+  body .action:hover {
+    color: black; }
+  body .title {
+    font-size: 18px; }
+  body .btn {
+    margin-right: 10px; }
+  body .tooltipcontrol {
+    position: relative;
+    display: inline-block; }
+    body .tooltipcontrol .tooltiptext {
+      visibility: hidden;
+      background: #161616;
+      border-radius: 100px;
+      -webkit-border-radius: 100px;
+      -moz-border-radius: 100px;
+      height: 24px;
+      font-size: 12px;
+      font-family: 'IBM Plex Sans';
+      color: #FFFFFF;
+      padding-left: 8px;
+      padding-right: 8px;
+      line-height: 24px;
+      bottom: 20px;
+      position: absolute;
+      z-index: 1;
+      white-space: nowrap; }
+  body .tooltipcontrol:hover .tooltiptext {
+    visibility: visible; }
+
+body.fixed {
+  position: fixed; }
+
+#postsContainer {
+  width: 100%; }
+  #postsContainer .post {
+    width: 150px;
+    height: 150px;
+    padding: 5px 5px 5px 5px;
+    border: 1px solid gray;
+    float: left;
+    margin-right: 10px;
+    margin-left: 10px;
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    font-size: 14px; }
+    #postsContainer .post .title {
+      max-height: 20px;
+      font-size: 18px;
+      font-weight: 700; }
+    #postsContainer .post .title, #postsContainer .post .message {
+      overflow: hidden;
+      padding-bottom: 10px;
+      margin-left: 5px;
+      margin-right: 5px; }
+    #postsContainer .post .message {
+      font-size: 12px; }
+
+/*# sourceMappingURL=dashboard.css.map */

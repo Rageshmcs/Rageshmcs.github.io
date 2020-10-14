@@ -1,0 +1,26 @@
+<div align="right">
+<span ng-show="globals.currentUser.manager">
+
+<!-- <i class="action" ng-click="approvetransition()"> Approve Inventories </i> | </span>
+<i class="action" ng-click="dashboardtransition()">{{globals.currentUser.username}} Dashboard </i>| -->
+<i class="action" ng-click="logouttransition()"> Logout</i>
+</div>
+<div ng-show="dataLoading" class="alert alert-danger">{{error}}</div>
+
+<i class="action" ng-disabled="dataLoading" ng-click="addtransition(inv)">Create Post</i>
+
+<div ng-show="inv[0]" class="title alert alert-info">
+    <center><b>Available Posts</b></center>
+</div>
+<div ng-show="!loading && !inv[0]" class="alert alert-danger"><center>No available posts</center></div>
+
+
+<div ng-show="inv[0]" id="postsContainer">
+	<div class="post" ng-repeat="inv in inv">
+		<div class='title' align="center">{{inv.productname}}</div>
+		<div class='message' align="center">{{inv.vendor}}</div>
+		<div align="center">
+			<i class="action" ng-disabled="dataLoading" ng-click="edittransition(inv)">edit</i> / <i class="action" class="material-icons action" ng-disabled="dataLoading" ng-click="delete(inv.id)">delete</i>
+		</div>
+	</div>
+</div>
