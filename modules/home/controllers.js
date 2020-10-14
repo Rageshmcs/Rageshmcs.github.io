@@ -24,7 +24,7 @@ angular.module('Home')
     	Helpers.getAllUsers();
     	Helpers.getCurrentUser();
 
-    	$http.get($rootscope.postsUrl + 'api/v1/inventories')
+    	$http.get($rootScope.postsUrl + 'api/v1/inventories')
                .success(function (response) {
                    $scope.inv = response.inventories;
                    $scope.loading = false;
@@ -42,12 +42,12 @@ angular.module('Home')
         $scope.dashboardtransition = Helpers.dashboardtransition;
 
 		$scope.delete = function (id) {
-			$http.delete($rootscope.postsUrl + 'api/v1/inventories/' + id
+			$http.delete($rootScope.postsUrl + 'api/v1/inventories/' + id
 			).success(function (response) {
                    if(response.success) {
 	                    $scope.error = response.message;
 	                    $scope.dataLoading = true;
-	                    $http.get($rootscope.postsUrl + 'api/v1/inventories')
+	                    $http.get($rootScope.postsUrl + 'api/v1/inventories')
 		               .success(function (response) {
 		                   $scope.inv = response.inventories;
 		               });
@@ -71,7 +71,7 @@ angular.module('Home')
 
 		$scope.add = function () {
 			$scope.dataLoading = true;
-			$http.post($rootscope.postsUrl + 'api/v1/inventories',
+			$http.post($rootScope.postsUrl + 'api/v1/inventories',
 			{
 				productid: $scope.productid,
 				productname: $scope.productname,
@@ -245,7 +245,7 @@ angular.module('Home')
 
 		$scope.saveEdit = function (id) {
 			$scope.dataLoading = true;
-			$http.put($rootscope.postsUrl + 'api/v1/inventories/' + id,
+			$http.put($rootScope.postsUrl + 'api/v1/inventories/' + id,
 			{
 				productname: $rootScope.editrecord.productname,
 				vendor: $rootScope.editrecord.vendor,

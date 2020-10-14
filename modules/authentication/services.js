@@ -6,7 +6,7 @@ angular.module('Authentication')
     ['Base64', '$http', '$cookieStore', '$rootScope', '$timeout',
     function (Base64, $http, $cookieStore, $rootScope, $timeout) {
         var service = {};
-        $rootscope.postsUrl = "https://react-or-no-react.herokuapp.com/"
+        $rootScope.postsUrl = "https://react-or-no-react.herokuapp.com/"
         $rootScope.serverUrl = "https://artful-iudex.herokuapp.com/"; // Another URL "https://my-json-server.typicode.com/artfuldev/json-db-data/"
 
         service.Login = function (username, password, callback) {
