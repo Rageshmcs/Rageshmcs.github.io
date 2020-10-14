@@ -17,6 +17,9 @@ angular.module('Helpers')
             $location.path('/');
         };
 
+        $rootscope.postsUrl = "https://react-or-no-react.herokuapp.com/"
+        $rootScope.serverUrl = "https://artful-iudex.herokuapp.com/"; // Another URL "https://my-json-server.typicode.com/artfuldev/json-db-data/"
+
 
         helper.getAllUsers = function () { // expecting a different API to fetch users based on content or reaction alone
             if (!$rootScope.userList) {
