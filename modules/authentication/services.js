@@ -11,7 +11,7 @@ angular.module('Authentication')
 
         service.Login = function (username, password, callback) {
 
-            $http.post($rootscope.postsUrl + 'api/v1/users/search', { username: username, password: password })
+            $http.post($rootScope.postsUrl + 'api/v1/users/search', { username: username, password: password })
                .success(function (response) {
                    callback(response);
                });
