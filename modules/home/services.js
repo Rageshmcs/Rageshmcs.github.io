@@ -17,7 +17,7 @@ angular.module('Helpers')
             $location.path('/');
         };
 
-        $rootscope.postsUrl = "https://react-or-no-react.herokuapp.com/"
+        $rootScope.postsUrl = "https://react-or-no-react.herokuapp.com/"
         $rootScope.serverUrl = "https://artful-iudex.herokuapp.com/"; // Another URL "https://my-json-server.typicode.com/artfuldev/json-db-data/"
 
 
